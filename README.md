@@ -1,9 +1,12 @@
 fireyang's vim config and plugins
 ## set vim start config
-    #set plugins folder
-    set runtimepath=$VIMRUNTIME,~/,/vimfiles/path/to
-    #set vimrc config file 
-    source /vimfiles/vimrc/path/to
+set up user vim config:~/.vimrc；
+
+Enter the following code；change the "FireVim_Path"
+
+	let g:FireVim_Path='/firevim/path/to'
+	exec "set" 'runtimepath=$VIMRUNTIME,~/,'.g:FireVim_Path.'vimfiles/'
+	exec "source" g:FireVim_Path.'vimrc'
 
 ## vim plugs
 * [NERDtree](https://github.com/scrooloose/nerdtree)
