@@ -1,5 +1,5 @@
 fireyang's vim config and plugins
-## set vim start config
+## set vim start config [test on Mac]
 set up user vim config:~/.vimrc；
 
 Enter the following code；change the "FireVim_Path"
