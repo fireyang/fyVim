@@ -7,7 +7,10 @@ au!
 "autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
 endif
 
-exec "set" 'runtimepath=$VIMRUNTIME,~/,'.g:FireVim_Path.'vimfiles/'
+"exec "set" 'runtimepath=$VIMRUNTIME,~/,'.g:FireVim_Path.'vimfiles/'
+"设置插件
+exec "source" g:FireVim_Path.'vimrc_plugin'
+
 
 " 载入文件类型插件
 filetype plugin on 
@@ -54,18 +57,7 @@ set guioptions-=m
 "隐藏工具栏
 set guioptions-=T
 
-"plugin setting 插件设置--------------------------------------------------------------------
-" NERDTree插件的快捷键
-imap <silent> <F7> <esc>:NERDTreeToggle<CR>
-nmap <silent> <F7> :NERDTreeToggle<CR>
-"NERDTree过滤文件
-let NERDTreeIgnore=['\.svn$','.fla$','.doc$','.swc$']
-"NERDTree标签文件目录
-let NERDTreeBookmarksFile=g:FireVim_Path.'temp/NerdBookmarks.txt'
-
 let g:snips_author = 'FireYang'
-"}}}
-
 
 " 窗口区域切换,F5 后 ↑↓←→  来切换
 "imap <silent> <C-h> <esc><C-W><left>
@@ -127,17 +119,6 @@ set nowrap
 "set mapleader
 let mapleader = ","
 
-"设置minBuffer插件===============================
-" Close the current buffer
-map <leader>bd :Bclose<cr>
-"切换下一缓存区文件
-map <leader>bn :bn<cr>
-"切换上一缓存区文件
-map <leader>bp :bp<cr>
-" Close all the buffers
-map <leader>ba :1,300 bd!<cr>
-" When pressing <leader>cd switch to the directory of the open buffer
-map <leader>cd :cd %:p:h<cr>
 "Insert now date
 "map <F3> :echo strftime("%Y-%m-%d %a %I:%M %p")<cr>
 
@@ -155,6 +136,7 @@ map <leader>tl :tabN<cr>
 map <leader>th :tabp<cr>
 " Fast editing of the .vimrc
 "map <leader>e :e! $HOME/.vimrc<cr>
+"edit vimrc file
 map <leader>e :exec "edit" g:FireVim_Path.'vimrc'<cr>
 " fast saving 
 map <leader>w :w<cr>
