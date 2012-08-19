@@ -7,6 +7,8 @@ au!
 "autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
 endif
 
+exec "set" 'runtimepath=$VIMRUNTIME,~/,'.g:FireVim_Path.'vimfiles/'
+
 " 载入文件类型插件
 filetype plugin on 
 

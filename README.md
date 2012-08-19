@@ -5,7 +5,6 @@ set up user vim config:~/.vimrc；
 Enter the following code；change the "FireVim_Path"
 
 	let g:FireVim_Path='/firevim/path/to'
-	exec "set" 'runtimepath=$VIMRUNTIME,~/,'.g:FireVim_Path.'vimfiles/'
 	exec "source" g:FireVim_Path.'vimrc'
 
 ## vim plugs
