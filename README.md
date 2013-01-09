@@ -1,12 +1,11 @@
 fireyang's vim config and plugins
 ## set vim start config [test on Mac]
-set up user vim config:~/.vimrc；
+使用下面的命令clone命令:
 
-Enter the following code；change the "FireVim_Path"
+	git clone git@github.com:fireyang/fyVim.git ~/path/fyVim
+	ln -s ~/path/fyVim ~/.vim
+	ln -s ~/.vim/vimrc  ~/.vimrc
 
-	let g:FireVim_Path='/firevim/path/to'
-	exec "source" g:FireVim_Path.'vimrc'
 
-## vim plugs
-* [NERDtree](https://github.com/scrooloose/nerdtree)
-* [bufexplorer](http://www.vim.org/scripts/script.php?script_id=42)
+## plugs
+参考"vundle_setting"和“vimrc_fy”来配置自己所需要的插件
