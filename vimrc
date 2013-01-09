@@ -1,4 +1,8 @@
-﻿" Last Change: 2012-11-13 17:21:06
+﻿" Last Change: 2013-1-9 
+" Last Change: 2012-11-13 17:21:06
+
+source ~/.vim/vundle_setting
+
 "判断系统是否具有“自动命令”（autocmd）的支持
 if has('autocmd')
 "清除所有的自动命令，以方便调试
@@ -7,9 +11,6 @@ au!
 "autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
 endif
 
-"exec "set" 'runtimepath=$VIMRUNTIME,~/,'.g:FireVim_Path.'vimfiles/'
-"设置插件
-exec "source" g:FireVim_Path.'vimrc_plugin'
 
 
 " 载入文件类型插件
@@ -137,7 +138,7 @@ map <leader>th :tabp<cr>
 " Fast editing of the .vimrc
 "map <leader>e :e! $HOME/.vimrc<cr>
 "edit vimrc file
-map <leader>e :exec "edit" g:FireVim_Path.'vimrc'<cr>
+map <leader>e :exec "edit" '~/.vimrc'<cr>
 " fast saving 
 map <leader>w :w<cr>
 map <leader>q :q<cr>
