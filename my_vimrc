@@ -30,6 +30,7 @@ set cursorline
 set smartindent "根据当前行的缩进，预测下一行的缩进
 set nocompatible  "使得vim避免了原始vi的一些漏洞和限制
 set autoindent      "使用你当前行的缩进来设置你下一行的缩进
+set showcmd                   " display an incomplete command in statusline
 
 "在输入命令时列出匹配项目，也就是截图底部的效果
 set wildmenu
@@ -190,16 +191,18 @@ Bundle 'FuzzyFinder'
 " FuF customisations "{{{
 let g:fuf_modesDisable = []
 nnoremap <leader>h :FufHelp<CR>
-nnoremap <leader>1  :FufTag<CR>
-nnoremap <leader>2  :FufFileWithCurrentBufferDir<CR>
-nnoremap <leader>@  :FufFile<CR>
-nnoremap <leader>3  :FufBuffer<CR>
-nnoremap <leader>4  :FufDirWithCurrentBufferDir<CR>
-nnoremap <leader>$  :FufDir<CR>
-nnoremap <leader>5  :FufChangeList<CR>
-nnoremap <leader>6  :FufMruFile<CR>
-nnoremap <leader>7  :FufLine<CR>
-nnoremap <leader>9  :FufTaggedFile<CR>
+nnoremap <leader>1  :FufLine<CR>
+"备份
+"nnoremap <leader>1  :FufTag<CR>
+"nnoremap <leader>2  :FufFileWithCurrentBufferDir<CR>
+"nnoremap <leader>@  :FufFile<CR>
+"nnoremap <leader>3  :FufBuffer<CR>
+"nnoremap <leader>4  :FufDirWithCurrentBufferDir<CR>
+"nnoremap <leader>$  :FufDir<CR>
+"nnoremap <leader>5  :FufChangeList<CR>
+"nnoremap <leader>6  :FufMruFile<CR>
+"nnoremap <leader>7  :FufLine<CR>
+"nnoremap <leader>9  :FufTaggedFile<CR>
 "   }}}
 
 
@@ -209,15 +212,30 @@ Bundle "pangloss/vim-javascript"
 Bundle 'jQuery'
 " }}}
 
+" syntastic {{{
+Bundle 'scrooloose/syntastic'
+" }}}
+
+" ultisnips {{{
+"Bundle 'sirver/ultisnips'
+Bundle 'UltiSnips'
+" }}}
 
 "snipmate {{{
-Bundle "msanders/snipmate.vim"
-Bundle "jamescarr/snipmate-nodejs"
+"Bundle 'msanders/snipmate.vim'
+"Bundle 'jamescarr/snipmate-nodejs'
 " }}}
 
 "erlang {{{
 Bundle "jimenezrick/vimerl"
 " }}}
 
+"vim-markdown {{{
+Bundle "plasticboy/vim-markdown"
+" }}}
+
+"nerdcommenter {{{
+Bundle "scrooloose/nerdcommenter"
+" }}}
 " 载入文件类型插件
 filetype plugin indent on
